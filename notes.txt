@@ -1,0 +1,14 @@
+Project Initialization
+
+Init the node project: npm init -y  
+- This creates the package.json containing project information and dependencies
+
+Install Express: npm install express
+- This installs the framework express
+
+Install typescript: npm install --save-dev typescript ts-node
+
+
+Install the types we will be using: npm i --save-dev @types/node @types/express
+
+Create tsconfig.json file
