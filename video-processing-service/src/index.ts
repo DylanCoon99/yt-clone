@@ -22,15 +22,17 @@ app.post("/process-video", (req, res) => {
 		// on the end event
 		.on("end", () => {
 			res.status(200).send("Video finished processing successfully.");
+			console.log("Video finished processing successfully.");
 		})
 		// on the error event
 		.on("error", (err) => {
 			console.log(`Error processing video: ${err.message}`);
 			res.status(500).send(`Error processing video: ${err.message}`);
+			return;
 		})
 		.save(outputFilePath);
 
-	res.status(200).send("Video processing started");
+	//res.status(200).send("Video processing started"); // Can't write to header twice
 
 
 });
